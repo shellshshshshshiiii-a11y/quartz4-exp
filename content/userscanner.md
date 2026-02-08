@@ -47,3 +47,20 @@ title: UserScanner — лог действий ассистента
   - Вывод: на GitHub Pages публикуется содержимое директории `public/`, сформированное Quartz при build.
 - Запрос: запушить изменения (чтобы обновился GitHub Pages).
   - План: проверить git status/ветку/remotes, добавить изменения, сделать commit, push в ветку `v4`.
+- Git: добавил файл `content/userscanner.md`, закоммитил и запушил в `origin/v4`.
+  - Commit: `b0287b1` (message: `content: add userscanner log`).
+  - Комментарий: GitHub Actions теперь должен автоматически собрать Quartz и выкатить Pages (workflow `.github/workflows/deploy.yml`).
+- Проверка GitHub Actions деплоя:
+  - Workflow run: `21801843343` (Deploy Quartz site to GitHub Pages) — SUCCESS.
+  - Jobs: build (32s) и deploy (10s) — оба успешны.
+  - Ссылка на run: https://github.com/shellshshshshshiiii-a11y/quartz4-exp/actions/runs/21801843343
+  - GitHub Pages URL: https://shellshshshshshiiii-a11y.github.io/quartz4-exp/
+- Проверка опубликованной страницы на GitHub Pages:
+  - URL `https://shellshshshshshiiii-a11y.github.io/quartz4-exp/userscanner` открывается (HTTP 200) и заголовок соответствует `UserScanner — лог действий ассистента`.
+  - Комментарий: если «страница не появилась», вероятно речь о том, что она не видна в навигации/на главной. Нужно добавить ссылку на неё (например, в `content/index.md`) или включить/настроить компоненты навигации (Explorer/Search).
+- Запрос: создать рядом новый `.md` файл с инструкцией по установке и настройке `user-scanner`.
+  - План: создать `content/userscanner-install.md` (или похожее имя), описать варианты установки (pip/venv), базовую настройку, примеры команд, прокси/экспорт, обновление.
+- Создал инструкцию: `content/userscanner-install.md`.
+  - Комментарий: файл содержит требования, установку (Linux/Termux/Windows), базовые флаги, bulk-режим, прокси, экспорт и обновление.
+- Запрос: запушить инструкцию `userscanner-install.md` на GitHub Pages.
+  - План: `git add`, `git commit`, `git push origin v4`.
