@@ -74,4 +74,6 @@ title: UserScanner — лог действий ассистента
   - Действие: поставлю Go из официального tarball (go.dev/dl), затем соберу/установлю `lazyports` через `go install` и протестирую TUI.
 - LazyPorts: создал отчёт `content/lazyports-report.md`.
   - Комментарий: в отчёте описал установку Go, сборку/установку lazyports, нюанс про необходимость TTY, и результаты теста (листинг портов + details view). Далее — commit/push для деплоя на GitHub Pages.
-- LazyPorts: отчёт будет задеплоен на GitHub Pages после commit/push.
+- LazyPorts: отчёт задеплоен на GitHub Pages.
+  - GitHub Actions run: 21802438471 — SUCCESS.
+  - URL страницы: https://shellshshshshshiiii-a11y.github.io/quartz4-exp/lazyports-report
