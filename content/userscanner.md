@@ -64,3 +64,13 @@ title: UserScanner — лог действий ассистента
   - Комментарий: файл содержит требования, установку (Linux/Termux/Windows), базовые флаги, bulk-режим, прокси, экспорт и обновление.
 - Запрос: запушить инструкцию `userscanner-install.md` на GitHub Pages.
   - План: `git add`, `git commit`, `git push origin v4`.
+- Проверка деплоя инструкции:
+  - Workflow run: `21801987416` — SUCCESS.
+  - Страница доступна: https://shellshshshshshiiii-a11y.github.io/quartz4-exp/userscanner-install
+- Новый запрос: протестировать инструмент LazyPorts (https://github.com/v9mirza/LazyPorts), оформить отчёт отдельным `.md` в `content/` и задеплоить (push в `v4`).
+  - Принципы безопасности: тестирую только локально (localhost/127.0.0.1) и на ограниченном наборе портов, без сканирования внешних целей.
+  - План: клонировать репо, прочитать README/зависимости, установить, прогнать минимальные команды/самотесты, собрать вывод/скрин выводов в отчёт, закоммитить и запушить.
+- LazyPorts требует Go (go.mod: `go 1.24.0`, `toolchain go1.24.12`). На сервере Go не был установлен.
+  - Действие: поставлю Go из официального tarball (go.dev/dl), затем соберу/установлю `lazyports` через `go install` и протестирую TUI.
+- LazyPorts: создал отчёт `content/lazyports-report.md`.
+  - Комментарий: в отчёте описал установку Go, сборку/установку lazyports, нюанс про необходимость TTY, и результаты теста (листинг портов + details view). Далее — commit/push для деплоя на GitHub Pages.
